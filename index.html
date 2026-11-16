@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>НЕОН-ВЫЖИВАНИЕ</title>
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+  <canvas id="cv" tabindex="0"></canvas>
+  <div id="hint">WASD — движение · ПРОБЕЛ — суперудар · ESC/P — пауза · M — музыка</div>
+  <div id="fps-counter" title="Фактическая частота отрисовки, средняя за полсекунды">FPS: —</div>
+  <section id="frame-settings" aria-label="Настройки кадров">
+    <label for="fps-limit">Лимит FPS</label>
+    <select id="fps-limit">
+      <option value="30">30 FPS — экономия</option>
+      <option value="60" selected>60 FPS</option>
+      <option value="90">90 FPS</option>
+      <option value="120">120 FPS</option>
+      <option value="144">144 FPS</option>
+      <option value="165">165 FPS</option>
+      <option value="240">240 FPS</option>
+      <option value="0">По частоте экрана</option>
+    </select>
+  </section>
+  <aside id="weapon-summary" hidden aria-label="Сводка оружия в паузе">
+    <h2>АРСЕНАЛ</h2>
+    <div id="weapon-summary-list"></div>
+  </aside>
+  <!-- engine создаёт NeonGame; main запускает игру после регистрации подсистем. -->
+  <script src="js/engine.js?v=8"></script>
+  <script src="js/data.js?v=8"></script>
+  <script src="js/background.js?v=8"></script>
+  <script src="js/audio.js?v=8"></script>
+  <script src="js/weapons.js?v=8"></script>
+  <script src="js/enemies.js?v=8"></script>
+  <script src="js/simulation.js?v=8"></script>
+  <script src="js/progression.js?v=8"></script>
+  <script src="js/renderer.js?v=8"></script>
+  <script src="js/main.js?v=8"></script>
+</body>
+</html>
